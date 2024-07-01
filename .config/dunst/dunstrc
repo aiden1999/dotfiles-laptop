@@ -1,0 +1,140 @@
+# See dunst(5) for all configuration options
+# wiki: https://github.com/dunst-project/dunst/wiki
+
+[global]
+    ### Display ###
+
+    monitor = 0  # which monitor to display notifications on
+    follow = none  # display on focused monitor: mouse, keyboard, or none
+
+    ### Geometry ###
+
+    width = 300  # max width - is dynamic, dependent on content. Excludes frame
+    height = 200  # max height. Excludes frame
+    origin = top-right  # position
+    offset = 15x45  # offset from origin
+    scale = 0  # scale factor. if 0, auto-detected
+    notification_limit = 20  # 0 for no limit
+
+    ### Progress bar ###
+
+    progress_bar = true
+    progress_bar_height = 10  # includes frame
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 0
+    progress_bar_corners = all  # which progress bar corners to round
+    
+    indicate_hidden = yes  # show many messages are hidden because of notif limit
+    transparency = 0  # range [0;100] only works with compositor (X11)
+    separator_height = 2  # distance between notifications - ignore if gap_size nonzero
+    padding = 8  # padding between text and separator
+    horizontal_padding = 8
+    text_icon_padding = 0  # padding between text and icon
+    frame_width = 0
+    frame_color = "#aaaaaa"
+    gap_size = 10  # size of gap between notifications - needs compositor
+    separator_color = frame  # ignore if gap_size nonzero
+
+    sort = update  # options: id, urgency_ascending (low to high), urgency_descending, update (most receent at the top)
+    idle_threshold = 120  # don't remove message if user is idle (no mouse or keyboard input)
+
+    ### Text ###
+
+    font = JetBrainsMono Nerd Font 10
+    line_height = 0  # space between lines
+    markup = full
+
+    # %a appname, %s summary, %i icon with path, %I icon without path, %p progross value, %n progress value without extra chars
+    format = "<b>%s</b>\n%b"
+    alignment = left  # text alignment: left, center or right
+    vertical_alignment = center  # vertical alignment of text and icon. top, center, bottom
+
+    show_age_threshold = 60  # show age of messge if older than show_age_threshold secs, -1 to disable
+    ellipsize = middle  # where to put ellipsis in long lines: start, middle, end
+    ignore_newline = no  # ignore new lines \n
+    stack_duplicates = true  # stack together notifications with the same content
+    hide_duplicate_count = false  # hide the count of stacked notifications with the same content
+    show_indicators = no  # display indicators for URLs (U) and actions (A)
+
+    ### Icons ###
+
+    enable_recursive_icon_lookup = true
+    icon_theme = "Papirus-Dark, Papirus"  # only used with recursive icon lookup
+    icon_position = left  # align icons left/right/top/off
+    min_icon_size = 32  # scale small icons up
+    max_icon_size = 128  # scale large icons down
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/  # only when not using recursive
+    icon_corner_radius = 0
+    icon_corners = all  # which icon corners to round
+
+    ### History ###
+
+    sticky_history = yes
+    history_length = 20
+
+    ### Misc/Advanced ###
+
+    dmenu = /usr/bin/dmenu -p dunst:  # dmenu path
+    browser = /usr/bin/xdg-open  # browser for opening urls in context menu
+
+    always_run_script = true  # always run rule-defined scripts, even if the notification is suppressed
+
+    title = Dunst  # title of the window spawned by dusnt
+    class = Dunst  # class of the window spawned by dunst
+    corner_radius = 10
+    corners = all  # which corners to round
+
+    # Ignore the dbus closeNotification message. Useful to enforce the timeout set by dunst configuration. Without this parameter, an application may close the notification sent before the user defined timeout.
+    ignore_dbusclose = false
+
+    ### Wayland ###
+
+    # layer = top  # uncomment to let notifcations appear under fullscreen applications
+    force_xwayland = false  # use X11 output on Wayland
+
+    ### Legacy ###
+
+    force_xinerama = false  # use Xinerama instead of RandR for multimonitor support
+
+    ### Mouse ###
+
+    # Defines list of actions for each mouse event. Possible values are:
+    # * none: Don't do anything.
+    # * do_action: Invoke the action determined by the action_name rule. If there is no such action, open the context menu.
+    # * open_url: If the notification has exactly one url, open it. If there are multiple ones, open the context menu.
+    # * close_current: Close current notification.
+    # * close_all: Close all notifications.
+    # * context: Open context menu for the notification.
+    # * context_all: Open context menu for all notifications.
+    # These values can be strung together for each mouse event, and will be executed in sequence.
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = false
+
+[urgency_low]
+    background = "#3b4252"
+    foreground = "#4c566a"
+    timeout = 10
+    #default_icon = /path/to/icon  # Icon for notifications with low urgency, uncommment to enable
+
+[urgency_normal]
+    background = "#434c5e"
+    foreground = "#e5e9f0"
+    timeout = 10
+    override_pause_level = 30
+    #default_icon = /path/to/icon  # Icon for notifications with urgency, uncoment to enable
+
+[urgency_critical]
+    background = "#bf616a"
+    foreground = "#eceff4"
+    timeout = 0
+    override_pause_level = 60
+    #default_icon = /path/to/icon  # Icon for notifications with critical urgency, uncomment to enable
+
+# see /etc/dunst/dunstrc for customisation by app, and scripting. Removed from here as I'm probably never going to use it.
+
