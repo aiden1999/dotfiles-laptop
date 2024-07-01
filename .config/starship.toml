@@ -54,6 +54,7 @@ modified = " "
 staged = " "
 ahead = ""
 diverged = "󰃻 "
+deleted = "󰆴 "
 
 # LANGUAGES
 # =========
