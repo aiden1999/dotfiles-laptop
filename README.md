@@ -39,3 +39,7 @@ Install `github-cli`. Then for GitHub authentication:
 ```
 $    gh auth login
 ```
+
+### Kitty
+
+Install `kitty`. Settings in `~/.config/kitty/kitty.conf`.
