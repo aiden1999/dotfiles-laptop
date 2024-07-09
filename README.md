@@ -67,3 +67,4 @@ Install `kitty`. Settings in `~/.config/kitty/kitty.conf`.
 ## Misc
 
 - `neofetch`
+- `texlive-meta`
