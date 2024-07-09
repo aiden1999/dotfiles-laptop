@@ -1,6 +1,8 @@
 # dotfiles-laptop-arch
 
-## Touchpad
+## Hardware
+
+### Touchpad
  Edit `/etc/X11/xorg.conf.d/30-touchpad.conf`:
  ```
 Section "InputClass"
@@ -11,5 +13,15 @@ Section "InputClass"
     Option "NaturalScrolling" "true"
 EndSection
 ```
+Restart xorg for changes to take effect.
 
+## Desktop
+
+### Scaling
+
+Settings in `~/.XResources`. To load `.Xresources`:
+
+```
+$  xrdb -merge ~/.Xresources
+```
 Restart xorg for changes to take effect.
