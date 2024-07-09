@@ -30,6 +30,22 @@ Restart xorg for changes to take effect.
 
 Install `ttf-jetbrains-mono-nerd`.
 
+### Compositor
+
+Install `picom`. Settings in `~/.config/picom/picom.conf`. Autostart managed in i3 config. Restart i3 for changes to take effect.
+
+### Window Manager
+
+`i3-wm` should already be installed. Settings in `~/.config/i3/config`. Restart i3 for changes to take effect.
+
+### Bar
+
+Install `polybar`. Settings in `~/.config/polybar`. Restart i3 for changes to take effect.
+
+### Rofi
+
+Install `rofi`. Settings in `~/.config/rofi`. Restart i3 for changes to take effect.
+
 ## Terminal
 
 ### Git
