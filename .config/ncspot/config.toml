@@ -1,0 +1,37 @@
+command_key = ':'
+inital_screen = "library"
+use_nerdfont = true
+flip_status_indicators = true
+# backend = ???
+# backend_device = ???
+audio_cache = true
+# audio_cache_size = number in MiB
+volnorm = false
+volnorm_pregain = 0.0
+default_keybdings = false
+notify = true # need to build with notify feature
+bitrate = 320
+gapless = true
+shuffle = false
+repeat = "off"
+playback_state = "Paused"
+library_tabs = [ "tracks", "albums", "artists", "playlists", "podcasts", "browse" ]
+cover_max_scale = 1.0 # need to build with cover feature
+hide_display_names = true
+
+[theme]
+background = "black"
+primary = "light white"
+secondary = "light black"
+title = "green"
+playing = "green"
+playing_bg = "black"
+highlight = "light white"
+highlight_bg = "light black"
+error = "light white"
+error_bg = "red"
+statusbar = "black"
+statusbar_progress = "green"
+statusbar_bg = "green"
+cmdline = "light white"
+cmdline_bg = "black"
