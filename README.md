@@ -1,4 +1,4 @@
-# dotfiles-laptop-arch
+# Setup Instructions
 
 ## Hardware
 
@@ -19,12 +19,16 @@ Restart xorg for changes to take effect.
 
 ### Scaling
 
-Settings in `~/.XResources`. To load `.Xresources`:
+Settings in `~/.Xresources`. To load `.Xresources`:
 
 ```
 $  xrdb -merge ~/.Xresources
 ```
 Restart xorg for changes to take effect.
+
+### Font
+
+Install `ttf-jetbrains-mono-nerd`.
 
 ## Terminal
 
@@ -43,3 +47,7 @@ $    gh auth login
 ### Kitty
 
 Install `kitty`. Settings in `~/.config/kitty/kitty.conf`.
+
+## Misc
+
+- `neofetch`
