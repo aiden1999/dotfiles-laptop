@@ -56,6 +56,7 @@ $   sudo pacman -S --needed git base-devel
 $   git clone https://aur.archlinux.org/yay.git
 $   cd yay
 $   makepkg -si
+```
 
 ### Git
 
@@ -74,6 +75,23 @@ $    gh auth login
 Install `kitty`. Settings in `~/.config/kitty/kitty.conf`.
 
 ### Shell
+
+Install `zsh`. Settings in `~/.zshrc`. Change shell with:
+```
+$   chsh -s $(which zsh)
+```
+
+#### Plugins
+
+- `zsh-autosuggestions`
+- `zsh-autocomplete-git` (AUR)
+- `fzf`
+- `fzf-tab-git` (AUR)
+- `zoxide`
+- `exa`
+- `zsh-syntax-highlighting`
+- `starship`. Settings in `~/.config/starship.toml`
+- `thefuck`
 
 ## Theming
 
