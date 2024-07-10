@@ -46,6 +46,9 @@ Install `polybar`. Settings in `~/.config/polybar`. Restart i3 for changes to ta
 
 Install `rofi`. Settings in `~/.config/rofi`. Restart i3 for changes to take effect.
 
+### Notifications.
+Install `dunst`. Settings in `~/.config/dunst/`
+
 ## Command Line
 
 ### AUR Helper
@@ -86,12 +89,29 @@ $   chsh -s $(which zsh)
 - `zsh-autosuggestions`
 - `zsh-autocomplete-git` (AUR)
 - `fzf`
-- `fzf-tab-git` (AUR)
+- `fzf-tab-git` (AUR) - bugged?
 - `zoxide`
 - `exa`
 - `zsh-syntax-highlighting`
 - `starship`. Settings in `~/.config/starship.toml`
 - `thefuck`
+
+### Text Editor
+Install `neovim`. Config in `~/.config/nvim/`
+
+### Pacman
+
+In `/etc/pacman.conf` uncomment `Color` for coloured output and add `ILoveCandy` for a cool progress bar.
+
+## Password Feedback
+
+```
+$   sudo visudo
+```
+then add the line
+```
+Defaults pwfeedback
+```
 
 ## Theming
 
@@ -139,9 +159,21 @@ Set theme with lxappearance, and change font while you're there.
 
 ### GRUB
 
+## Documents and Media
+
+### PDF Reader
+
+Install `zathura` and PDF plugin. Settings in `~/.config/zathura/`
+
+### Spotify Client
+
+Install `ncspot`. Settings in `~/.config/`
+
 ## Misc
 
 - `neofetch`
 - `texlive-meta`
 - `thunderbird`
 - `digikam`
+- `bat`
+- `stylua`
