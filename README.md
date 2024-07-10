@@ -46,7 +46,7 @@ Install `polybar`. Settings in `~/.config/polybar`. Restart i3 for changes to ta
 
 Install `rofi`. Settings in `~/.config/rofi`. Restart i3 for changes to take effect.
 
-## Terminal
+## Command Line
 
 ### Git
 
@@ -60,11 +60,30 @@ Install `github-cli`. Then for GitHub authentication:
 $    gh auth login
 ```
 
-### Kitty
+### Terminal
 
 Install `kitty`. Settings in `~/.config/kitty/kitty.conf`.
+
+### Shell
+
+## Theming
+
+### Wallpaper
+
+### Icons
+
+### GTK
+
+### Qt
+
+### Cursor
+
+### Display Manager
+
+### GRUB
 
 ## Misc
 
 - `neofetch`
 - `texlive-meta`
+- `thunderbird`
