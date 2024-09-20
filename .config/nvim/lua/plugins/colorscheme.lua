@@ -1,10 +1,13 @@
 return {
-  { "shaunsingh/nord.nvim" },
+    { "shaunsingh/nord.nvim" },
 
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "nord",
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "nord",
+        },
     },
-  },
+
+    { "folke/tokyonight.nvim", enabled = false },
+    { "catppuccin/nvim", enabled = false },
 }

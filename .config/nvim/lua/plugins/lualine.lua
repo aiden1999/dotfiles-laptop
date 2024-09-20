@@ -22,12 +22,14 @@ return {
 
         local opts = {
             options = {
-                theme = "auto",
+                theme = "nord",
                 globalstatus = vim.o.laststatus == 3,
                 disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter" } },
             },
             sections = {
-                lualine_a = { "mode" },
+                lualine_a = {
+                    { "mode", separator = { left = "", right = "" }, padding = { left = 1, right = 1 } },
+                },
                 lualine_b = {
                     "branch",
                     {
@@ -48,6 +50,8 @@ return {
                             end
                         end,
                     },
+                },
+                lualine_c = {
                     {
                         "diagnostics",
                         symbols = {
@@ -58,33 +62,19 @@ return {
                         },
                     },
                 },
-                lualine_c = { "filename" },
                 lualine_x = { "encoding", "fileformat", "filetype" },
                 lualine_y = {
                     { "progress", separator = " ", padding = { left = 1, right = 1 } },
                 },
-                lualine_z = { "location" },
+                lualine_z = {
+                    {
+                        "location",
+                        separator = { right = "", left = "" },
+                    },
+                },
             },
             extensions = { "neo-tree", "lazy" },
         }
-
-        -- do not add trouble symbols if aerial is enabled
-        if vim.g.trouble_lualine then
-            local trouble = require("trouble")
-            local symbols = trouble.statusline
-                and trouble.statusline({
-                    mode = "symbols",
-                    groups = {},
-                    title = false,
-                    filter = { range = true },
-                    format = "{kind_icon}{symbol.name:Normal}",
-                    hl_group = "lualine_c_normal",
-                })
-            table.insert(opts.sections.lualine_c, {
-                symbols and symbols.get,
-                cond = symbols and symbols.has,
-            })
-        end
 
         return opts
     end,
