@@ -120,7 +120,7 @@ Install `neovim`. Config in `~/.config/nvim/`
 In `/etc/pacman.conf` uncomment `Color` for coloured output
 and add `ILoveCandy` for a cool progress bar.
 
-## Password Feedback
+#### Password Feedback
 
 ```bash
 sudo visudo
@@ -186,6 +186,13 @@ Set theme with lxappearance, and change font while you're there.
 ### Qt
 
 ### Cursor
+
+```bash
+git clone https://github.com/0jdxt/oreo-nord-cursors.git
+cd oreo-nord-cursors
+DBUS_SESSION_BUS_ADDRESS="" make build
+sudo make install
+```
 
 ### Display Manager
 
